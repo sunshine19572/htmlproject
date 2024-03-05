@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тайна весеннего праздника</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin-top: 20px;
+        }
+        .answer-input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Тайна весеннего праздника</h1>
+    <p class="intro">Если вы читаете этот текст, значит, вы уже прочли наше сообщение и отгадали первый этап квеста. С этой минуты задания в квесте будут постепенно усложняться, пройдите все этапы и разгодайте тайну весеннего праздника.</p>
+    <p class="hint">Для получения следующей подсказки отгадайте загадку:</p>
+    <p class="riddle">Порою грязными руками мы<br>
+    достаем его из брюк,<br>
+    подносим к дырке с волосами и<br>
+    раздается смачный звук.<br></p>
+    <form id="passwordForm">
+        <label for="answer">Ответ на загадку:</label><br>
+        <input type="text" id="answer" name="answer" class="answer-input"><br>
+        <input type="submit" value="Получить подсказку" class="submit-button">
+    </form>
+</div>
+<script>
+    var passwords = {
+        'носовой платок': ['Умнички, вы прошли уже второй этап квеста. С каждой минутой вы становитесь все ближе и ближе к отгадке Тайны весеннего праздника. Заострите ваше внимание, ведь следующую подсказку вы можете услышать только на уроке учителя, который обучает нас всему сущему и живому', 'Новый текст для подсказки.', 'Новый текст для загадки.'],
+        'пароль2': ['Новый текст для вступления2.', 'Новый текст для подсказки2.', 'Новый текст для загадки2.'],
+        'пароль3': ['Новый текст для вступления3.', 'Новый текст для подсказки3.', 'Новый текст для загадки3.']
+    };
+
+    document.getElementById('passwordForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var answer = document.getElementById('answer').value.toLowerCase();
+        if (passwords.hasOwnProperty(answer)) {
+            var newTexts = passwords[answer];
+            document.querySelector('.intro').innerText = newTexts[0];
+            document.querySelector('.hint').innerText = newTexts[1];
+            document.querySelector('.riddle').innerText = newTexts[2];
+        } else {
+            alert('Попробуйте еще раз!');
+        }
+        document.getElementById('answer').value = '';
+    });
+</script>
+</body>
+</html>
+
+   

@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('img/fs.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #CD5C5C;   
+}
+
+.intro {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #CD5C5C;
+    text-align: center;
+}
+
+.hint {
+    font-size: 20px;
+    color:#CD5C5C;
+}
+
+.riddle {
+    font-size: 24px;
+    color: #CD5C5C;
+}
+
+.answer-input {
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    color:  #CD5C5C;
+}
+
+.submit-button {
+    background-color: #ffb8c6;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #ff7e5f;
+}
